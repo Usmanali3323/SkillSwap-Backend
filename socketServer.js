@@ -4,7 +4,7 @@ import http from 'http'
 import { Message } from "./Models/message.js";
 import { Room } from "./Models/room.js";
 import express from 'express'
-import DbConn from './db/DBConn.js';
+import DbConn from './db/DbConn.js';
 import { upload } from './Middleware/multer.middleware.js';
 import { uploadCloudinary } from './utils/cloudinary.js';
 import path from 'path';
