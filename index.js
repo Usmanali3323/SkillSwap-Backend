@@ -3,7 +3,7 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import userRouter from "./Routes/user.routes.js";
-import DbConn from "./db/DBConn.js";// Replace with your actual DB connection file path
+import DbConn from "./db/DbConn.js";// Replace with your actual DB connection file path
 import skillRouter from './Routes/skill.routes.js'
 import categoryRouter from './Routes/category.routes.js'
 import connectionRouter from './Routes/connection.routes.js'
