@@ -23,22 +23,14 @@ const app = express();
 // Middleware
 
 
-const allowedOrigins = [
-  "https://skillswap-backend-ta8t.onrender.com", // production
-  "http://localhost:3000" // local dev
-];
-
 app.use(cors({
   origin: function (origin, callback) {
     console.log("CORS request from:", origin);
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
+    callback(null, origin || true); // reflect the request origin
   },
   credentials: true,
 }));
+
 
 
 app.use(express.json({ limit: "16kb" }));
