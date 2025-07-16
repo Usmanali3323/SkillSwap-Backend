@@ -28,7 +28,7 @@ const logginUser = await User.findById(user._id)
 const options = {
     httpOnly:true,
     secure : true,
-    sameSite:"Strict"
+    sameSite:"None"
 }
 
 const {accessToken,refreshToken} = await generateAccessTokenAndRefereshToken(user._id);
