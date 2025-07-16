@@ -26,7 +26,7 @@ const app = express();
 const allowedOrigins = [
   "https://skillswap-backend-ta8t.onrender.com", // production
   "http://localhost:3000",
-  "http://localhost:5173/"// local dev
+  "http://localhost:5173"// local dev
 ];
 
 app.use(cors({
