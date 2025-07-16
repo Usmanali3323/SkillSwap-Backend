@@ -56,7 +56,7 @@ export const verifiedAccountController = async (req, res, next) => {
     const cookieOptions = {
       httpOnly: true,
       secure: true, // Make sure you're using HTTPS in production
-      sameSite: "Strict",
+      sameSite: "None",
     };
 
     const responseData = {
