@@ -12,7 +12,7 @@ export const logOutUserController = async(req,res)=>{
    const options = {
     httpOnly:true,
     secure:true,
-    sameSite:"Strict"
+    sameSite:"None"
    }
     res.status(200)
     .clearCookie("accessToken",options)
