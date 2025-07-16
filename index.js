@@ -22,13 +22,11 @@ const app = express();
 
 // Middleware
 
-
-import cors from 'cors';
-
 const allowedOrigins = [
   "https://skillswap-backend-ta8t.onrender.com",
   "http://localhost:3000",
-  "http://localhost:5173"
+  "http://localhost:5173",
+  "https://skillswap-a5313.web.app"
 ];
 
 app.use(cors({
