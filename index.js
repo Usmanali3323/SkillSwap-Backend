@@ -21,10 +21,22 @@ const app = express();
 // const allowedOrigins = ['http://localhost:5173']; // Frontend URL
 
 // Middleware
+const allowedOrigins = [
+  "https://skillswap-backend-ta8t.onrender.com",
+  "http://localhost:3000"
+];
+
 app.use(cors({
-  origin: ["https://skillswap-backend-ta8t.onrender.com","http://localhost:3000"],
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true,
 }));
+
 app.use(express.json({ limit: "16kb" }));
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(cookieParser());
