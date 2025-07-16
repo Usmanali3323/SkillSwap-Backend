@@ -22,7 +22,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: true,
+  origin: ["https://skillswap-backend-ta8t.onrender.com","http://localhost:3000"],
   credentials: true,
 }));
 app.use(express.json({ limit: "16kb" }));
