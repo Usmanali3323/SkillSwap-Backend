@@ -23,7 +23,7 @@ const app = express();
 // Middleware
 
 const allowedOrigins = [
-  "https://skillswap-backend-ta8t.onrender.com",
+  "https://skillswap-a5313.web.app",
   "http://localhost:3000",
   "http://localhost:5173",
   "https://skillswap-a5313.web.app"
