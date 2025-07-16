@@ -26,7 +26,6 @@ const allowedOrigins = [
   "https://skillswap-a5313.web.app",
   "http://localhost:3000",
   "http://localhost:5173",
-  "https://skillswap-a5313.web.app"
 ];
 
 app.use(cors({
