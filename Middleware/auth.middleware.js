@@ -87,15 +87,15 @@ const verifyUser = async (req, res, next) => {
     req.user = user;
     next();
   } catch (error) {
-    const options = {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "Strict",
-    };
+    // const options = {
+    //   httpOnly: true,
+    //   secure: process.env.NODE_ENV === "production",
+    //   sameSite: "Strict",
+    // };
     res
       .status(error.statusCode || 401)
-      .clearCookie("accessToken", options)
-      .clearCookie("refreshToken", options)
+      // .clearCookie("accessToken", options)
+      // .clearCookie("refreshToken", options)
       .json(new ApiError(error.statusCode || 401, error, error.message));
   }
 };
